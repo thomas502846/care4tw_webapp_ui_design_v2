@@ -69,14 +69,24 @@
     <main id="main-content" role="main">
         <section class="section container">
             <div style="margin-bottom: var(--space-lg);">
-                <h1>公眾詢問管理</h1>
-                <p class="meta">管理來自官網詢問表單的問題與回覆</p>
+                <h1>客服紀錄管理</h1>
+                <p class="meta">網站訪客、註冊學員、付費會員提問與客服回覆紀錄管理</p>
             </div>
             
             <!-- Filter Bar -->
             <div class="card" style="margin-bottom: var(--space-lg);">
                 <div class="inquiry-filters">
                     <div class="filter-row">
+                        <div class="filter-field">
+                            <label for="name-search">提問者姓名</label>
+                            <input type="text" id="name-search" placeholder="搜尋姓名">
+                        </div>
+                        
+                        <div class="filter-field">
+                            <label for="national-id-search">身份證號</label>
+                            <input type="text" id="national-id-search" placeholder="搜尋身份證號">
+                        </div>
+                        
                         <div class="filter-field">
                             <label for="status-filter">狀態篩選</label>
                             <select id="status-filter">
@@ -111,6 +121,7 @@
                         </div>
                         
                         <button type="button" class="btn btn--primary" onclick="applyFilters()">篩選</button>
+                        <button type="button" class="btn btn--success" data-open="modal-add-communication">➕ 新增溝通記錄</button>
                     </div>
                 </div>
             </div>
@@ -144,6 +155,7 @@
                             <div class="inquiry-subject">關於失智友善溝通課程的報名問題</div>
                             <div class="inquiry-preview">請問這門課程是否包含實作練習？我想了解詳細的課程內容安排...</div>
                             <div class="inquiry-status">
+                                <span class="status-badge status-badge--info">付費會員</span>
                                 <span class="status-badge status-badge--pending">待回覆</span>
                             </div>
                         </div>

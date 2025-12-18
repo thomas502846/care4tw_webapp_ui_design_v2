@@ -211,6 +211,81 @@
                         <button type="button" class="btn btn--primary">儲存設定</button>
                     </div>
                 </div>
+                
+                <!-- Points and Membership Settings -->
+                <div class="card" style="margin-top: var(--space-lg);">
+                    <h3>點數與會員設定</h3>
+                    <form class="settings-form">
+                        <div class="setting-item">
+                            <label for="purchase-points-expiry">購買點數使用期限</label>
+                            <div class="setting-input">
+                                <input type="number" id="purchase-points-expiry" value="365" min="1" max="999">
+                                <span class="unit">天</span>
+                            </div>
+                            <div class="meta">學員購買的點數預設有效期限</div>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <label for="gift-points-expiry">贈送點數使用期限</label>
+                            <div class="setting-input">
+                                <input type="number" id="gift-points-expiry" value="180" min="1" max="999">
+                                <span class="unit">天</span>
+                            </div>
+                            <div class="meta">轉贈的點數預設有效期限</div>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <label for="expiry-notifications">點數到期通知</label>
+                            <div class="setting-checkboxes">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-text">60天前</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-text">30天前</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-text">7天前</span>
+                                </label>
+                            </div>
+                            <div class="meta">在點數到期前提醒學員</div>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <label>點數轉贈規則</label>
+                            <div class="meta">
+                                • 轉贈點數保留原有到期日<br>
+                                • 限制單次轉贈（不可再次轉贈）<br>
+                                • 點數延期需學員申請並經管理員審核
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <label for="installment-options">信用卡分期付款</label>
+                            <div class="setting-checkboxes">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-text">3期</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-text">6期</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-text">12期</span>
+                                </label>
+                            </div>
+                            <div class="meta">可由財務部門選擇性設定分期選項</div>
+                        </div>
+                    </form>
+                    
+                    <div style="margin-top: var(--space-lg); text-align: center;">
+                        <button type="button" class="btn btn--primary">儲存設定</button>
+                    </div>
+                </div>
             </div>
             
             <!-- Tab Content: Content Management -->

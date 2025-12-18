@@ -275,6 +275,18 @@
                         <textarea id="announcement-content" rows="6" placeholder="請輸入公告內容..." required></textarea>
                     </div>
                     
+                    <div class="field">
+                        <label for="announcement-photo">公告照片</label>
+                        <input type="file" id="announcement-photo" accept="image/*" multiple>
+                        <div class="field__help">可上傳多張照片，支援 JPG、PNG 格式</div>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="announcement-video">公告影片連結</label>
+                        <input type="url" id="announcement-video" placeholder="例如：https://youtu.be/xxx">
+                        <div class="field__help">嵌入外部影片連結（如 YouTube）</div>
+                    </div>
+                    
                     <div class="form-row">
                         <div class="field">
                             <label for="start-date">開始時間</label>

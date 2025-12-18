@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>長照積分管理 | CFT 照顧學校</title>
+    <meta name="description" content="管理您的長照人員繼續教育積分，6年120積分追蹤與分析">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" role="banner">
+        <nav class="header__nav container" aria-label="主要導覽">
+            <div class="header__brand">
+                <img src="assets/images/logo.png" alt="CFT 照顧學校" class="header__logo">
+                <div class="header__name">CFT 照顧學校</div>
+            </div>
+            <ul class="header__menu" role="menubar">
+                <li role="none">
+                    <a href="courses.html" class="header__menu-item" role="menuitem">課程資訊</a>
+                </li>
+                <li role="none">
+                    <a href="teachers.html" class="header__menu-item" role="menuitem">師資群</a>
+                </li>
+                <li role="none">
+                    <a href="faq.html" class="header__menu-item" role="menuitem">常見問題</a>
+                </li>
+                <li role="none">
+                    <a href="student-dashboard.html" class="header__menu-item header__menu-item--active" role="menuitem">學員中心</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <section class="section container">
+            <div class="page-header">
+                <h1>📜 長照積分管理</h1>
+                <p class="meta">追蹤並管理您的長照人員繼續教育積分（6年120積分）</p>
+            </div>
+
+            <!-- Summary Card -->
+            <div class="card" style="margin-bottom: var(--space-lg);">
+                <h3>積分總覽（最近6年）</h3>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md);">
+                    <div class="kpi__item">
+                        <div class="kpi__label">已完成積分</div>
+                        <div class="kpi__number">68 點</div>
+                        <div class="progress">
+                            <span style="width: 57%"></span>
+                        </div>
+                        <div class="kpi__note">目標：120 點</div>
+                    </div>
+                    <div class="kpi__item">
+                        <div class="kpi__label">專業課程</div>
+                        <div class="kpi__number">52 點</div>
+                        <div class="kpi__note">需達 84 點</div>
+                    </div>
+                    <div class="kpi__item">
+                        <div class="kpi__label">專業品質/倫理/法規</div>
+                        <div class="kpi__number">16 點</div>
+                        <div class="kpi__note">需達 24 點</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year Tabs -->
+            <div class="card">
+                <div class="tabs">
+                    <button class="tab tab--active">2025</button>
+                    <button class="tab">2024</button>
+                    <button class="tab">2023</button>
+                    <button class="tab">2022</button>
+                    <button class="tab">2021</button>
+                    <button class="tab">2020</button>
+                </div>
+
+                <!-- 2025 Content -->
+                <div class="tab-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-md);">
+                        <h3>2025年度積分記錄</h3>
+                        <button class="btn btn--primary btn--sm">➕ 新增歷史積分記錄</button>
+                    </div>
+
+                    <!-- Progress by Attribute -->
+                    <div style="margin-bottom: var(--space-lg);">
+                        <h4>依積分課程屬性統計</h4>
+                        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-sm);">
+                            <div class="stat-card">
+                                <div class="stat-label">專業課程</div>
+                                <div class="stat-value">12 點</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">專業品質</div>
+                                <div class="stat-value">3 點</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">專業倫理</div>
+                                <div class="stat-value">2 點</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">專業法規</div>
+                                <div class="stat-value">1 點</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress by Category -->
+                    <div style="margin-bottom: var(--space-lg);">
+                        <h4>依積分課程類別統計</h4>
+                        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-sm);">
+                            <div class="stat-card">
+                                <div class="stat-label">消防安全</div>
+                                <div class="stat-value">2 點</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">緊急應變</div>
+                                <div class="stat-value">2 點</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">感染管制</div>
+                                <div class="stat-value">2 點</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">性別敏感度</div>
+                                <div class="stat-value">1 點</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">多元族群文化</div>
+                                <div class="stat-value">1 點</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course List -->
+                    <div>
+                        <h4>已完成課程明細</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>日期</th>
+                                    <th>課程名稱</th>
+                                    <th>積分屬性</th>
+                                    <th>積分類別</th>
+                                    <th>積分</th>
+                                    <th>積分字號</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025/01/15</td>
+                                    <td>失智友善溝通與行為支持</td>
+                                    <td>專業課程</td>
+                                    <td>失智症照護</td>
+                                    <td>6 點</td>
+                                    <td>中物療全長審字第1140220號</td>
+                                    <td>
+                                        <button class="btn btn--small btn--ghost">編輯</button>
+                                        <button class="btn btn--small btn--ghost">刪除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2025/01/10</td>
+                                    <td>消防安全與緊急應變</td>
+                                    <td>專業品質</td>
+                                    <td>消防安全</td>
+                                    <td>3 點</td>
+                                    <td>長照協會字第1140115號</td>
+                                    <td>
+                                        <button class="btn btn--small btn--ghost">編輯</button>
+                                        <button class="btn btn--small btn--ghost">刪除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Notice -->
+            <div class="notice notice--info" style="margin-top: var(--space-lg);">
+                <strong>📌 長照積分規定：</strong>
+                <ul style="margin-left: 20px; margin-top: 8px;">
+                    <li>每6年應累積至少120積分</li>
+                    <li>專業課程至少84點</li>
+                    <li>專業品質、專業倫理、專業法規合計至少24點</li>
+                    <li>消防安全、緊急應變、感染管制、性別敏感度合計至少需達10點</li>
+                    <li>原住民族與多元族群文化敏感度：建議每年各至少1點</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2025 CFT 照顧學校 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

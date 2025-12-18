@@ -56,7 +56,7 @@
                     <span>學員記錄中心</span>
                 </div>
                 <h1>學員記錄中心</h1>
-                <p class="meta">管理您的個人資料、證照目標和學習歷程</p>
+                <p class="meta">管理我的個人資料、證照目標和學習歷程</p>
             </div>
 
             <!-- Profile Form Grid -->
@@ -184,11 +184,11 @@
                         </div>
                         
                         <div class="form-section aio-role-section">
-                            <h3>🎯 AIO職種設定與學習路徑</h3>
+                            <h3>🎯 AIO職種與學習路徑簡介</h3>
                             
                             <div class="aio-role-selection">
                                 <div class="field">
-                                    <label for="aio-profession">主要AIO職種 <span class="required">*</span></label>
+                                    <label for="aio-profession">選擇我的AIO職種 <span class="required">*</span></label>
                                     <select id="aio-profession" required>
                                         <option value="">請選擇您的主要專業領域</option>
                                         <option value="care-worker" selected>👩‍⚕️ 照顧服務員</option>
@@ -247,42 +247,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <div class="secondary-roles">
-                                    <h4>次要興趣領域 （可多選）</h4>
-                                    <div class="secondary-role-options">
-                                        <label class="secondary-role-checkbox">
-                                            <input type="checkbox" name="secondary-roles" value="home-nurse">
-                                            <span class="role-tag">👩‍⚕️ 居家護理師</span>
-                                        </label>
-                                        <label class="secondary-role-checkbox">
-                                            <input type="checkbox" name="secondary-roles" value="social-worker">
-                                            <span class="role-tag">👨‍💼 社工師</span>
-                                        </label>
-                                        <label class="secondary-role-checkbox">
-                                            <input type="checkbox" name="secondary-roles" value="nutrition-specialist">
-                                            <span class="role-tag">🍎 營養師</span>
-                                        </label>
-                                    </div>
-                                    <div class="field__help">選擇次要興趣領域可獲得相關課程推薦</div>
-                                </div>
                             </div>
                         </div>
                         
                         <div class="form-section certificate-goals-section">
-                            <h3>🎓 目標證照管理與設定</h3>
+                            <h3>🎓 學習目標設定與管理</h3>
                             
                             <div class="certificate-management">
                                 <div class="cert-goals-tabs">
-                                    <button type="button" class="cert-goal-tab cert-goal-tab--active" data-tab="aio-certs">📜 AIO認證</button>
-                                    <button type="button" class="cert-goal-tab" data-tab="gov-certs">🏛️ 政府認證</button>
-                                    <button type="button" class="cert-goal-tab" data-tab="professional-certs">🎯 專業認證</button>
+                                    <button type="button" class="cert-goal-tab cert-goal-tab--active" data-tab="aio-certs">📜 AIO證照</button>
+                                    <button type="button" class="cert-goal-tab" data-tab="gov-certs">🏛️ 政府證照</button>
+                                    <button type="button" class="cert-goal-tab" data-tab="professional-certs">🎯 民間證照</button>
                                     <button type="button" class="cert-goal-tab" data-tab="obtained-certs">✅ 已獲得</button>
                                 </div>
                                 
                                 <div class="cert-goal-content" data-content="aio-certs">
                                     <div class="cert-goal-header">
-                                        <h4>AIO認證證照目標</h4>
+                                        <h4>AIO證照目標</h4>
                                         <div class="goal-summary">
                                             <span class="summary-badge summary-badge--primary">主要目標: 1張</span>
                                             <span class="summary-badge">次要目標: 0張</span>
@@ -344,7 +325,7 @@
                                 
                                 <div class="cert-goal-content" data-content="gov-certs" style="display: none;">
                                     <div class="cert-goal-header">
-                                        <h4>政府認證證照目標</h4>
+                                        <h4>政府證照目標</h4>
                                         <div class="goal-summary">
                                             <span class="summary-badge summary-badge--primary">主要目標: 1張</span>
                                             <span class="summary-badge">次要目標: 0張</span>
@@ -401,7 +382,7 @@
                                 
                                 <div class="cert-goal-content" data-content="professional-certs" style="display: none;">
                                     <div class="cert-goal-header">
-                                        <h4>專業認證證照目標</h4>
+                                        <h4>民間證照目標</h4>
                                         <div class="goal-summary">
                                             <span class="summary-badge">主要目標: 0張</span>
                                             <span class="summary-badge">次要目標: 2張</span>
@@ -414,7 +395,7 @@
                                                 <input type="checkbox" name="professional-certs" value="dementia-care">
                                                 <span class="cert-checkmark"></span>
                                                 <div class="cert-goal-info">
-                                                    <div class="cert-name">失智照顧專業認證</div>
+                                                    <div class="cert-name">失智照顧民間證照</div>
                                                     <div class="cert-desc">失智友善照顧相關課程認證</div>
                                                     <div class="cert-progress">
                                                         <div class="cert-progress-bar">
@@ -434,7 +415,7 @@
                                                 <input type="checkbox" name="professional-certs" value="hospice-care" checked>
                                                 <span class="cert-checkmark"></span>
                                                 <div class="cert-goal-info">
-                                                    <div class="cert-name">安寧照顧專業認證</div>
+                                                    <div class="cert-name">安寧照顧民間證照</div>
                                                     <div class="cert-desc">安寧陪伴相關課程認證</div>
                                                     <div class="cert-progress">
                                                         <div class="cert-progress-bar">

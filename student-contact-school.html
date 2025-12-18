@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>聯絡照顧學校 | CFT 照顧學校</title>
+    <meta name="description" content="直接向照顧學校提問與查看回覆記錄">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" role="banner">
+        <nav class="header__nav container" aria-label="主要導覽">
+            <div class="header__brand">
+                <img src="assets/images/logo.png" alt="CFT 照顧學校" class="header__logo">
+                <div class="header__name">CFT 照顧學校</div>
+            </div>
+            <ul class="header__menu" role="menubar">
+                <li role="none">
+                    <a href="courses.html" class="header__menu-item" role="menuitem">課程資訊</a>
+                </li>
+                <li role="none">
+                    <a href="teachers.html" class="header__menu-item" role="menuitem">師資群</a>
+                </li>
+                <li role="none">
+                    <a href="faq.html" class="header__menu-item" role="menuitem">常見問題</a>
+                </li>
+                <li role="none">
+                    <a href="student-dashboard.html" class="header__menu-item header__menu-item--active" role="menuitem">學員中心</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <section class="section container">
+            <div class="page-header">
+                <h1>💬 聯絡照顧學校</h1>
+                <p class="meta">直接向校方資詢、提問，並查看提問記錄</p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: 2fr 1fr; gap: var(--space-lg);">
+                <!-- New Inquiry Form -->
+                <div class="card">
+                    <h3>📝 新增提問</h3>
+                    <form class="inquiry-form">
+                        <div class="field">
+                            <label for="inquiry-category">提問類別 <span class="required">*</span></label>
+                            <select id="inquiry-category" required>
+                                <option value="">請選擇類別</option>
+                                <option value="course">課程相關</option>
+                                <option value="registration">報名相關</option>
+                                <option value="payment">付款/點數相關</option>
+                                <option value="certificate">證書/積分相關</option>
+                                <option value="technical">網站使用問題</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="inquiry-subject">主旨 <span class="required">*</span></label>
+                            <input type="text" id="inquiry-subject" placeholder="簡要描述您的問題" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="inquiry-content">詳細內容 <span class="required">*</span></label>
+                            <textarea id="inquiry-content" rows="6" placeholder="請詳細描述您的問題或需求" required></textarea>
+                        </div>
+
+                        <div class="notice notice--info">
+                            <strong>📧 回覆方式：</strong> 我們會在收到您的詢問後3個工作日內透過電子信箱回覆。
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn--ghost">清除</button>
+                            <button type="submit" class="btn btn--primary">送出提問</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Quick Info -->
+                <div>
+                    <div class="card" style="margin-bottom: var(--space-md);">
+                        <h4>📞 聯絡資訊</h4>
+                        <div style="line-height: 1.8;">
+                            <p><strong>客服專線：</strong><br>0800-123-456</p>
+                            <p><strong>服務時間：</strong><br>週一至週五 09:00-18:00</p>
+                            <p><strong>Email：</strong><br>service@care4tw.org</p>
+                            <p><strong>Line ID：</strong><br>@care4tw</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h4>💡 常見問題</h4>
+                        <p style="margin-bottom: 8px;">在提問前，也可以先查看常見問題：</p>
+                        <a href="faq.html" class="btn btn--ghost btn--sm">前往常見問題</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inquiry History -->
+            <div class="card" style="margin-top: var(--space-lg);">
+                <h3>📋 我的提問記錄</h3>
+                
+                <div class="inquiry-list">
+                    <!-- Inquiry Item -->
+                    <div class="inquiry-item">
+                        <div class="inquiry-header">
+                            <div class="inquiry-info">
+                                <h4 class="inquiry-subject">關於失智友善課程的報名問題</h4>
+                                <div class="inquiry-meta">
+                                    <span class="badge">課程相關</span>
+                                    <span>2025/01/15 10:30</span>
+                                </div>
+                            </div>
+                            <span class="status-badge status-badge--success">已回覆</span>
+                        </div>
+                        <div class="inquiry-content">
+                            <p><strong>提問：</strong>請問這門課程是否包含實作練習？我想了解詳細的課程內容安排...</p>
+                        </div>
+                        <div class="inquiry-response">
+                            <p><strong>回覆（2025/01/16 14:20）：</strong></p>
+                            <p>您好！失智友善溝通課程包含理論講解與實際演練，課程中會有小組討論和情境模擬。詳細課程大綱請參考課程頁面...</p>
+                            <div class="responder">回覆人員：王小華</div>
+                        </div>
+                    </div>
+
+                    <!-- Inquiry Item Pending -->
+                    <div class="inquiry-item">
+                        <div class="inquiry-header">
+                            <div class="inquiry-info">
+                                <h4 class="inquiry-subject">點數購買相關問題</h4>
+                                <div class="inquiry-meta">
+                                    <span class="badge badge--info">付款/點數相關</span>
+                                    <span>2025/01/18 15:45</span>
+                                </div>
+                            </div>
+                            <span class="status-badge status-badge--warning">處理中</span>
+                        </div>
+                        <div class="inquiry-content">
+                            <p><strong>提問：</strong>請問點數購買後的有效期限是多久？是否可以延期？</p>
+                        </div>
+                        <div class="notice notice--info" style="margin-top: 8px;">
+                            我們已收到您的提問，將盡快回覆。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2025 CFT 照顧學校 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .inquiry-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .inquiry-item {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: var(--space-md);
+            background: var(--bg-color);
+        }
+
+        .inquiry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+        }
+
+        .inquiry-info {
+            flex: 1;
+        }
+
+        .inquiry-subject {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+        }
+
+        .inquiry-meta {
+            display: flex;
+            gap: var(--space-sm);
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .inquiry-content {
+            margin: var(--space-sm) 0;
+            padding: var(--space-sm);
+            background: var(--bg-light);
+            border-radius: 4px;
+        }
+
+        .inquiry-response {
+            margin-top: var(--space-sm);
+            padding: var(--space-sm);
+            background: #f0f9ff;
+            border-left: 3px solid var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .responder {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .status-badge--success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-badge--warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+    </style>
+</body>
+</html>
+

@@ -70,6 +70,22 @@
                 <p class="meta">管理教師帳號、專長與公開資料</p>
             </div>
             
+            <!-- Search Section -->
+            <div class="card" style="margin-bottom: var(--space-lg);">
+                <h3>搜尋師資</h3>
+                <form class="filters-row" style="display: flex; gap: var(--space-md); align-items: flex-end;">
+                    <div class="field" style="flex: 1;">
+                        <label for="teacher-name-search">姓名</label>
+                        <input type="text" id="teacher-name-search" placeholder="搜尋教師姓名">
+                    </div>
+                    <div class="field" style="flex: 1;">
+                        <label for="teacher-expertise-search">專長</label>
+                        <input type="text" id="teacher-expertise-search" placeholder="搜尋專長領域">
+                    </div>
+                    <button type="button" class="btn btn--primary" onclick="searchTeachers()">搜尋</button>
+                </form>
+            </div>
+            
             <div class="card">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-lg)">
                     <h3>師資列表</h3>
@@ -284,6 +300,32 @@
                                 <input type="tel" id="teacher-phone" placeholder="如：09xx-xxx-xxx">
                             </div>
                         </div>
+                        
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="teacher-gender">生理性別</label>
+                                <select id="teacher-gender">
+                                    <option value="">請選擇</option>
+                                    <option value="male">男</option>
+                                    <option value="female">女</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="teacher-national-id">身份證字號</label>
+                                <input type="text" id="teacher-national-id" placeholder="請輸入身份證字號" maxlength="10">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="teacher-address">戶籍地址</label>
+                                <input type="text" id="teacher-address" placeholder="請輸入完整戶籍地址">
+                            </div>
+                            <div class="field">
+                                <label for="teacher-line">Line ID</label>
+                                <input type="text" id="teacher-line" placeholder="請輸入 Line ID">
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="form-section">
@@ -317,13 +359,29 @@
                                 <input type="text" id="teacher-bank" placeholder="如：台灣銀行">
                             </div>
                             <div class="field">
+                                <label for="teacher-bank-code">收款銀行代碼</label>
+                                <input type="text" id="teacher-bank-code" placeholder="銀行代碼 (如：004)" maxlength="3">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="field">
                                 <label for="teacher-account">帳號</label>
                                 <input type="text" id="teacher-account" placeholder="匯款帳號">
                             </div>
+                            <div class="field">
+                                <label for="teacher-account-name">戶名</label>
+                                <input type="text" id="teacher-account-name" placeholder="帳戶戶名">
+                            </div>
                         </div>
                         <div class="field">
-                            <label for="teacher-account-name">戶名</label>
-                            <input type="text" id="teacher-account-name" placeholder="帳戶戶名">
+                            <label for="teacher-residency">領款人基本資料</label>
+                            <select id="teacher-residency">
+                                <option value="">請選擇</option>
+                                <option value="local">本國籍</option>
+                                <option value="local-overseas">本國籍但未在台居</option>
+                                <option value="foreign-183">外國籍在台滿183天</option>
+                                <option value="foreign-less-183">外國籍在台未滿183天（以 1/1–12/31 為基準）</option>
+                            </select>
                         </div>
                     </div>
                 </form>

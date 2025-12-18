@@ -120,6 +120,22 @@
                             
                             <div class="form-row">
                                 <div class="field">
+                                    <label for="course-delivery">上課方式</label>
+                                    <select id="course-delivery">
+                                        <option value="in-person" selected>實體課程</option>
+                                        <option value="online">線上課程</option>
+                                        <option value="live-online">線上直播課程</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="course-waitlist">候補名額</label>
+                                    <input type="number" id="course-waitlist" value="5" min="0" max="20">
+                                    <div class="field__help">額滿後可報名候補的名額</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="field">
                                     <label for="course-hours">時數</label>
                                     <input type="number" id="course-hours" value="6" min="1" max="24">
                                 </div>
@@ -134,10 +150,10 @@
                             
                             <!-- Advanced Credit Settings -->
                             <div id="credit-settings" class="credit-settings-panel">
-                                <h4 class="panel-title">📋 積分類別設定</h4>
+                                <h4 class="panel-title">📋 積分相關資料設定</h4>
                                 <div class="form-row">
                                     <div class="field">
-                                        <label for="credit-category">積分類別</label>
+                                        <label for="credit-category">積分屬性</label>
                                         <select id="credit-category">
                                             <option value="basic-care" selected>基本照護類</option>
                                             <option value="dementia">失智症照護類</option>
@@ -157,7 +173,7 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="field">
-                                        <label for="credit-level">積分等級</label>
+                                        <label for="credit-level">積分類別</label>
                                         <select id="credit-level">
                                             <option value="basic" selected>基礎級 (1倍)</option>
                                             <option value="intermediate">進階級 (1.2倍)</option>
@@ -165,14 +181,14 @@
                                         </select>
                                     </div>
                                     <div class="field">
-                                        <label for="credit-authority">認證機構</label>
-                                        <select id="credit-authority">
-                                            <option value="ltc-association" selected>長照學會</option>
-                                            <option value="nursing-association">護理學會</option>
-                                            <option value="social-work">社工師公會</option>
-                                            <option value="government">政府機關</option>
-                                            <option value="medical-association">醫師公會</option>
-                                        </select>
+                                        <label for="credit-authority">積分字號</label>
+                                        <input type="text" id="credit-authority" placeholder="例如：中物療全長審字第1140220號">
+                                        <div class="field__help">請填寫完整的積分認證字號</div>
+                                    </div>
+                                    <div class="field">
+                                        <label for="credit-date-range">起訖日</label>
+                                        <input type="text" id="credit-date-range" placeholder="例如：2025/06/02～2025/11/30">
+                                        <div class="field__help">積分有效期限範圍</div>
                                     </div>
                                 </div>
                                 <div class="credit-validation">
