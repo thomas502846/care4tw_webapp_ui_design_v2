@@ -306,6 +306,126 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Add Communication Record Modal (Customer Feedback 2025-12-18) -->
+            <div id="modal-add-communication" class="modal" style="display:none;">
+                <div class="modal-overlay" onclick="closeModal('modal-add-communication')"></div>
+                <div class="modal-content" style="max-width: 720px; max-height: 90vh; overflow-y: auto;">
+                    <div class="modal-header">
+                        <h2>➕ 新增溝通記錄</h2>
+                        <button class="modal-close" onclick="closeModal('modal-add-communication')">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form">
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="comm-time">提問時間</label>
+                                    <input type="datetime-local" id="comm-time">
+                                </div>
+                                <div class="field">
+                                    <label for="comm-channel">提問方式</label>
+                                    <select id="comm-channel">
+                                        <option value="phone">電話訪談</option>
+                                        <option value="meeting">面談</option>
+                                        <option value="email">E-mail對談</option>
+                                        <option value="line">Line對談</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="comm-identity-type">身份別</label>
+                                    <select id="comm-identity-type">
+                                        <option value="visitor">網站訪客</option>
+                                        <option value="student">註冊學員</option>
+                                        <option value="member">付費會員</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="comm-national-id">提問者身份證字號</label>
+                                    <input type="text" id="comm-national-id" placeholder="身份證字號 (可用於避免同名同姓)">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="comm-name">提問者姓名</label>
+                                    <input type="text" id="comm-name" placeholder="姓名">
+                                </div>
+                                <div class="field">
+                                    <label for="comm-gender">提問者生理性別</label>
+                                    <select id="comm-gender">
+                                        <option value="">請選擇</option>
+                                        <option value="male">男</option>
+                                        <option value="female">女</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="comm-phone">提問者電話</label>
+                                    <input type="tel" id="comm-phone" placeholder="09xx-xxx-xxx">
+                                </div>
+                                <div class="field">
+                                    <label for="comm-email">提問者Email</label>
+                                    <input type="email" id="comm-email" placeholder="name@example.com">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="comm-line">提問者Line ID</label>
+                                    <input type="text" id="comm-line" placeholder="Line ID">
+                                </div>
+                                <div class="field">
+                                    <label for="comm-category">提問類別</label>
+                                    <select id="comm-category">
+                                        <option value="course">課程相關</option>
+                                        <option value="registration">報名相關</option>
+                                        <option value="payment">付款/點數相關</option>
+                                        <option value="certificate">證書/積分相關</option>
+                                        <option value="technical">網站使用問題</option>
+                                        <option value="other">其他</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="comm-question">提問內容</label>
+                                <textarea id="comm-question" rows="4" placeholder="請輸入提問內容"></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="comm-reply-time">答覆時間</label>
+                                    <input type="datetime-local" id="comm-reply-time">
+                                    <div class="meta">（系統將自動記錄回覆的時間）</div>
+                                </div>
+                                <div class="field">
+                                    <label for="comm-responder">答覆者姓名</label>
+                                    <input type="text" id="comm-responder" placeholder="校方回覆人員姓名（僅校方可見）">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="comm-reply">答覆內容</label>
+                                <textarea id="comm-reply" rows="4" placeholder="請輸入回覆內容"></textarea>
+                            </div>
+
+                            <div class="field">
+                                <label for="comm-note">備註</label>
+                                <input type="text" id="comm-note" placeholder="備註（選填）">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal__footer" style="display:flex; justify-content:flex-end; gap: var(--space-sm);">
+                        <button class="btn btn--ghost" type="button" onclick="closeModal('modal-add-communication')">取消</button>
+                        <button class="btn btn--primary" type="button" onclick="alert('已儲存（示意）')">儲存</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -325,6 +445,24 @@
 
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script>
+        // Minimal modal helpers for this page (static mock)
+        function openModal(id) {
+            const el = document.getElementById(id);
+            if (el) el.style.display = 'block';
+        }
+        function closeModal(id) {
+            const el = document.getElementById(id);
+            if (el) el.style.display = 'none';
+        }
+        // Hook up data-open buttons
+        document.addEventListener('click', function (e) {
+            const target = e.target.closest('[data-open]');
+            if (!target) return;
+            const id = target.getAttribute('data-open');
+            if (id) openModal(id);
+        });
+    </script>
 
     <!-- Page-specific Styles -->
     <style>

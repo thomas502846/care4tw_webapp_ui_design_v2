@@ -81,6 +81,96 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Homepage Widgets: Announcements + Course Calendar (Customer Feedback 2025-12-18) -->
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin-top: var(--space-xl);">
+                    <div class="card">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-md)">
+                            <h3>📣 公告</h3>
+                            <a class="btn btn--ghost btn--sm" href="admin-announcements.html" aria-label="前往公告管理">管理</a>
+                        </div>
+                        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                            <div class="field">
+                                <label for="announcement-category">公告類別</label>
+                                <select id="announcement-category">
+                                    <option value="">全部</option>
+                                    <option value="school">校務</option>
+                                    <option value="course">課程</option>
+                                    <option value="event">活動</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="announcement-date">公告日期</label>
+                                <input type="date" id="announcement-date">
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list-item">
+                                <div class="list-title">【課程】失智友善溝通課程新增候補名額</div>
+                                <div class="list-meta">2025/01/18 · 課程</div>
+                            </div>
+                            <div class="list-item">
+                                <div class="list-title">【校務】會員點數到期通知（60/30/7天）已啟用</div>
+                                <div class="list-meta">2025/01/10 · 校務</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-md)">
+                            <h3>🗓️ 課程月曆表</h3>
+                            <a class="btn btn--ghost btn--sm" href="courses.html" aria-label="前往課程資訊">查看課程</a>
+                        </div>
+                        <div class="calendar">
+                            <div class="calendar__header">
+                                <button class="btn btn--ghost btn--sm" type="button" aria-label="上一個月">◀</button>
+                                <strong>2025 年 1 月</strong>
+                                <button class="btn btn--ghost btn--sm" type="button" aria-label="下一個月">▶</button>
+                            </div>
+                            <div class="calendar__grid" aria-label="課程月曆">
+                                <div class="calendar__cell calendar__cell--muted">29</div>
+                                <div class="calendar__cell calendar__cell--muted">30</div>
+                                <div class="calendar__cell calendar__cell--muted">31</div>
+                                <div class="calendar__cell">1</div>
+                                <div class="calendar__cell">2</div>
+                                <div class="calendar__cell">3</div>
+                                <div class="calendar__cell">4</div>
+                                <div class="calendar__cell">5</div>
+                                <div class="calendar__cell">6</div>
+                                <div class="calendar__cell">7</div>
+                                <div class="calendar__cell">8</div>
+                                <div class="calendar__cell">9</div>
+                                <div class="calendar__cell">10</div>
+                                <div class="calendar__cell">11</div>
+                                <div class="calendar__cell">12</div>
+                                <div class="calendar__cell">13</div>
+                                <div class="calendar__cell">14</div>
+                                <div class="calendar__cell calendar__cell--event">
+                                    15
+                                    <div class="calendar__event">失智友善溝通</div>
+                                </div>
+                                <div class="calendar__cell">16</div>
+                                <div class="calendar__cell">17</div>
+                                <div class="calendar__cell">18</div>
+                                <div class="calendar__cell">19</div>
+                                <div class="calendar__cell">20</div>
+                                <div class="calendar__cell">21</div>
+                                <div class="calendar__cell">22</div>
+                                <div class="calendar__cell">23</div>
+                                <div class="calendar__cell">24</div>
+                                <div class="calendar__cell">25</div>
+                                <div class="calendar__cell">26</div>
+                                <div class="calendar__cell">27</div>
+                                <div class="calendar__cell">28</div>
+                                <div class="calendar__cell">29</div>
+                                <div class="calendar__cell">30</div>
+                                <div class="calendar__cell">31</div>
+                                <div class="calendar__cell calendar__cell--muted">1</div>
+                            </div>
+                        </div>
+                        <div class="meta" style="margin-top: var(--space-sm);">此為示意月曆，實作時將由課程資料自動生成。</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -312,6 +402,18 @@
             text-align: left;
             justify-content: flex-start;
         }
+
+        /* Homepage Widgets (Announcements + Course Calendar) */
+        .list { display: flex; flex-direction: column; gap: var(--space-sm); }
+        .list-item { padding: var(--space-sm); border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); }
+        .list-title { font-weight: 600; }
+        .list-meta { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
+        .calendar__header { display:flex; justify-content:space-between; align-items:center; margin-bottom: var(--space-sm); }
+        .calendar__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+        .calendar__cell { min-height: 56px; padding: 8px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); position: relative; font-size: 0.95rem; }
+        .calendar__cell--muted { opacity: 0.5; }
+        .calendar__cell--event { border-color: var(--primary-color); }
+        .calendar__event { margin-top: 6px; font-size: 0.8rem; color: var(--primary-color); }
         
         .feature-highlight {
             padding: var(--space-md);

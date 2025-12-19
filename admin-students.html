@@ -396,6 +396,35 @@
         </div>
     </div>
 
+    <!-- Extend Points Expiry Modal (Customer Feedback 2025-12-18) -->
+    <div id="extend-points-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal">
+            <div class="modal__header">
+                <h3>延期點數使用期限</h3>
+                <button type="button" class="modal__close" onclick="closeModal('extend-points-modal')">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div class="meta" style="margin-bottom: var(--space-md);">
+                    <div><strong id="extend-student-name">學員</strong></div>
+                    <div id="extend-student-id" class="meta">ID:</div>
+                </div>
+                <div class="field">
+                    <label for="extend-days">延期天數</label>
+                    <input type="number" id="extend-days" min="1" max="365" placeholder="例如：30">
+                    <div class="meta">特殊情況下可由校方延期會員點數使用期限（示意）</div>
+                </div>
+                <div class="field">
+                    <label for="extend-reason">延期原因</label>
+                    <textarea id="extend-reason" rows="3" placeholder="請輸入延期原因"></textarea>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button type="button" class="btn btn--ghost" onclick="closeModal('extend-points-modal')">取消</button>
+                <button type="button" class="btn btn--primary" onclick="confirmExtendPoints()">確認延期</button>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
 
@@ -758,6 +787,37 @@
         function openBatchPointsModal() {
             document.getElementById('batch-points-modal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
+        }
+
+        // Extend points expiry (Customer Feedback 2025-12-18)
+        function openExtendPointsModal(name, id) {
+            const modal = document.getElementById('extend-points-modal');
+            const nameEl = document.getElementById('extend-student-name');
+            const idEl = document.getElementById('extend-student-id');
+            if (nameEl) nameEl.textContent = name;
+            if (idEl) idEl.textContent = 'ID: ' + id;
+            if (modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        function confirmExtendPoints() {
+            const days = document.getElementById('extend-days').value;
+            const reason = document.getElementById('extend-reason').value;
+            const name = document.getElementById('extend-student-name').textContent;
+            if (!days || days <= 0) {
+                alert('請輸入有效的延期天數');
+                return;
+            }
+            if (!reason.trim()) {
+                alert('請輸入延期原因');
+                return;
+            }
+            alert(`已為 ${name} 延期點數使用期限 ${days} 天（示意）`);
+            closeModal('extend-points-modal');
+            document.getElementById('extend-days').value = '';
+            document.getElementById('extend-reason').value = '';
         }
         
         function closeModal(modalId) {

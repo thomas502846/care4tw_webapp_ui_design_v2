@@ -76,6 +76,86 @@
                         <button class="btn btn--ghost">匯出</button>
                     </div>
                 </div>
+
+                <!-- Course Search (Customer Feedback 2025-12-18) -->
+                <div class="card" style="margin-bottom: var(--space-lg);">
+                    <h3>搜尋課程</h3>
+                    <form style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr auto; gap: var(--space-md); align-items:end;">
+                        <div class="field">
+                            <label for="search-date">上課日期</label>
+                            <input type="date" id="search-date">
+                        </div>
+                        <div class="field">
+                            <label for="search-name">課程名稱</label>
+                            <input type="text" id="search-name" placeholder="搜尋課程名稱">
+                        </div>
+                        <div class="field">
+                            <label for="search-category">課程類別</label>
+                            <select id="search-category">
+                                <option value="">全部</option>
+                                <option value="dementia">失智</option>
+                                <option value="hospice">安寧</option>
+                                <option value="community">社區</option>
+                                <option value="online">線上</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="search-location">地點</label>
+                            <input type="text" id="search-location" placeholder="台北/台中/線上">
+                        </div>
+                        <div class="field">
+                            <label for="search-teacher">講師</label>
+                            <input type="text" id="search-teacher" placeholder="搜尋講師">
+                        </div>
+                        <div class="field">
+                            <label for="search-notification">通知</label>
+                            <select id="search-notification">
+                                <option value="">不限</option>
+                                <option value="sent">已發通知</option>
+                                <option value="not-sent">未發通知</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn--primary" onclick="alert('搜尋（示意）')">搜尋</button>
+                    </form>
+                </div>
+
+                <!-- Course Notification Management (Customer Feedback 2025-12-18) -->
+                <div class="card" style="margin-bottom: var(--space-lg);">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <h3 style="margin:0;">課程通知管理</h3>
+                        <button class="btn btn--primary btn--sm" type="button" onclick="alert('開啟通知編輯（示意）')">✉️ 新增/發送通知</button>
+                    </div>
+                    <p class="meta" style="margin-top: var(--space-sm);">課務人員可編輯並發送通知信給學員或講師，並保留發送記錄（示意）。</p>
+                    <div class="table-responsive" style="margin-top: var(--space-md);">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>課程</th>
+                                    <th>發送時間</th>
+                                    <th>發送對象</th>
+                                    <th>主旨</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>失智友善溝通與行為支持</td>
+                                    <td>2025/01/10 09:30</td>
+                                    <td>學員</td>
+                                    <td>課前提醒與注意事項</td>
+                                    <td><button class="btn btn--small btn--ghost" type="button" onclick="alert('查看通知內容（示意）')">查看</button></td>
+                                </tr>
+                                <tr>
+                                    <td>失智友善溝通與行為支持</td>
+                                    <td>2025/01/12 15:10</td>
+                                    <td>講師</td>
+                                    <td>授課資訊確認</td>
+                                    <td><button class="btn btn--small btn--ghost" type="button" onclick="alert('查看通知內容（示意）')">查看</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 
                 <div class="table-responsive">
                     <table class="data-table">
