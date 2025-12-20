@@ -134,6 +134,105 @@
                         <button type="button" class="btn btn--ghost" style="margin-top: var(--space-md);" onclick="addCategory()">新增分類</button>
                     </div>
                 </div>
+
+                <!-- Additional Core Dictionaries (Customer Feedback 2025-12-18) -->
+                <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px; margin-top: var(--space-md);">
+                    <div class="card">
+                        <h3>長照小卡類別</h3>
+                        <div class="category-list">
+                            <div class="category-item">
+                                <input type="text" value="照顧服務員" class="category-name">
+                                <button type="button" class="btn btn--small btn--danger">刪除</button>
+                            </div>
+                            <div class="category-item">
+                                <input type="text" value="居家服務督導員" class="category-name">
+                                <button type="button" class="btn btn--small btn--danger">刪除</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn--ghost" style="margin-top: var(--space-md);">新增類別</button>
+                    </div>
+
+                    <div class="card">
+                        <h3>公告類別</h3>
+                        <div class="category-list">
+                            <div class="category-item">
+                                <input type="text" value="校務" class="category-name">
+                                <button type="button" class="btn btn--small btn--danger">刪除</button>
+                            </div>
+                            <div class="category-item">
+                                <input type="text" value="課程" class="category-name">
+                                <button type="button" class="btn btn--small btn--danger">刪除</button>
+                            </div>
+                            <div class="category-item">
+                                <input type="text" value="活動" class="category-name">
+                                <button type="button" class="btn btn--small btn--danger">刪除</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn--ghost" style="margin-top: var(--space-md);">新增類別</button>
+                    </div>
+                </div>
+
+                <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px; margin-top: var(--space-md);">
+                    <div class="card">
+                        <h3>積分課程屬性 / 積分課程類別</h3>
+                        <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px;">
+                            <div>
+                                <h4 style="margin-top:0;">積分課程屬性</h4>
+                                <div class="category-list">
+                                    <div class="category-item">
+                                        <input type="text" value="專業課程" class="category-name">
+                                        <button type="button" class="btn btn--small btn--danger">刪除</button>
+                                    </div>
+                                    <div class="category-item">
+                                        <input type="text" value="專業倫理" class="category-name">
+                                        <button type="button" class="btn btn--small btn--danger">刪除</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn--ghost" style="margin-top: var(--space-sm);">新增屬性</button>
+                            </div>
+                            <div>
+                                <h4 style="margin-top:0;">積分課程類別</h4>
+                                <div class="category-list">
+                                    <div class="category-item">
+                                        <input type="text" value="消防安全" class="category-name">
+                                        <button type="button" class="btn btn--small btn--danger">刪除</button>
+                                    </div>
+                                    <div class="category-item">
+                                        <input type="text" value="感染管制" class="category-name">
+                                        <button type="button" class="btn btn--small btn--danger">刪除</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn--ghost" style="margin-top: var(--space-sm);">新增類別</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>常用就職單位 / 常用職業</h3>
+                        <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px;">
+                            <div>
+                                <h4 style="margin-top:0;">常用就職單位</h4>
+                                <div class="category-list">
+                                    <div class="category-item">
+                                        <input type="text" value="○○醫院" class="category-name">
+                                        <button type="button" class="btn btn--small btn--danger">刪除</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn--ghost" style="margin-top: var(--space-sm);">新增單位</button>
+                            </div>
+                            <div>
+                                <h4 style="margin-top:0;">常用職業</h4>
+                                <div class="category-list">
+                                    <div class="category-item">
+                                        <input type="text" value="護理師" class="category-name">
+                                        <button type="button" class="btn btn--small btn--danger">刪除</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn--ghost" style="margin-top: var(--space-sm);">新增職業</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div style="margin-top: var(--space-md); text-align: center;">
                     <button type="button" class="btn btn--primary">儲存核心資料</button>
@@ -217,6 +316,55 @@
                     <h3>點數與會員設定</h3>
                     <form class="settings-form">
                         <div class="setting-item">
+                            <label for="membership-fee">會員資格費用</label>
+                            <div class="setting-input">
+                                <input type="number" id="membership-fee" value="4500" min="0" step="1">
+                                <span class="unit">元</span>
+                            </div>
+                            <div class="meta">會員資格限購買一次（取消後可再次購買）</div>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <label for="membership-bonus-points">加入會員贈送點數</label>
+                            <div class="setting-input">
+                                <input type="number" id="membership-bonus-points" value="100" min="0" step="1">
+                                <span class="unit">點</span>
+                            </div>
+                            <div class="meta">首次註冊學員上課前需先購買會員資格（示意）</div>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <label>點數與費用設定</label>
+                            <div class="meta">可彈性設定多種點數購買費用（示意）</div>
+                            <div class="table-responsive" style="margin-top: var(--space-sm);">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>方案</th>
+                                            <th>點數</th>
+                                            <th>費用（元）</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>單點</td>
+                                            <td><input type="number" value="1" min="1" style="width: 90px;"></td>
+                                            <td><input type="number" value="500" min="0" style="width: 120px;"></td>
+                                            <td><button type="button" class="btn btn--small btn--danger">刪除</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>方案A</td>
+                                            <td><input type="number" value="10" min="1" style="width: 90px;"></td>
+                                            <td><input type="number" value="4800" min="0" style="width: 120px;"></td>
+                                            <td><button type="button" class="btn btn--small btn--danger">刪除</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button" class="btn btn--ghost" style="margin-top: var(--space-sm);">新增方案</button>
+                        </div>
+                        <div class="setting-item">
                             <label for="purchase-points-expiry">購買點數使用期限</label>
                             <div class="setting-input">
                                 <input type="number" id="purchase-points-expiry" value="365" min="1" max="999">
@@ -279,6 +427,48 @@
                                 </label>
                             </div>
                             <div class="meta">可由財務部門選擇性設定分期選項</div>
+                        </div>
+
+                        <div class="setting-item">
+                            <label for="new-student-emails">新註冊學員 E-mail 通知</label>
+                            <textarea id="new-student-emails" rows="3" placeholder="可輸入多個收件人Email，以逗號或換行分隔\n例如：a@school.org\nb@school.org"></textarea>
+                            <div class="meta">新學員註冊時通知校務人員（可設定多人）</div>
+                        </div>
+
+                        <div class="setting-item">
+                            <label>設定修改覆核制</label>
+                            <div class="setting-checkbox">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-text">啟用覆核制（需第二位主管覆核才生效）</span>
+                                </label>
+                            </div>
+                            <div class="meta">示意：任何設定變更將進入「待覆核」狀態</div>
+                            <div class="table-responsive" style="margin-top: var(--space-sm);">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>變更項目</th>
+                                            <th>提出人</th>
+                                            <th>提出時間</th>
+                                            <th>狀態</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>購買點數使用期限：365 → 400 天</td>
+                                            <td>陳課務</td>
+                                            <td>2025/01/18 10:05</td>
+                                            <td><span class="badge badge--warning">待覆核</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn--small btn--primary" onclick="alert('覆核通過（示意）')">覆核</button>
+                                                <button type="button" class="btn btn--small btn--ghost" onclick="alert('退回（示意）')">退回</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </form>
                     

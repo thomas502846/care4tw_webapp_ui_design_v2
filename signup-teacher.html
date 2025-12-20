@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>講師註冊 | CFT 照顧學校</title>
+    <meta name="description" content="講師註冊並同意服務條款與個人資料提供同意書（示意）">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <header class="header" role="banner">
+        <nav class="header__nav container" aria-label="主要導覽">
+            <div class="header__brand">
+                <img src="assets/images/logo.png" alt="CFT 照顧學校" class="header__logo">
+                <div class="header__name">CFT 照顧學校</div>
+            </div>
+            <ul class="header__menu" role="menubar">
+                <li role="none"><a href="index.html" class="header__menu-item" role="menuitem">首頁</a></li>
+                <li role="none"><a href="teachers.html" class="header__menu-item" role="menuitem">師資群</a></li>
+                <li role="none"><a href="faq.html" class="header__menu-item" role="menuitem">常見問題</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="section container">
+            <div style="margin-bottom: var(--space-lg);">
+                <h1>👩‍🏫 講師註冊</h1>
+                <p class="meta">註冊時需同意「服務條款」及「個人資料提供同意書」（示意）</p>
+            </div>
+
+            <div class="card">
+                <form>
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                        <div class="field">
+                            <label for="tu-name">姓名*</label>
+                            <input id="tu-name" type="text" required>
+                        </div>
+                        <div class="field">
+                            <label for="tu-email">Email*</label>
+                            <input id="tu-email" type="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="tu-phone">聯絡電話*</label>
+                            <input id="tu-phone" type="tel" required>
+                        </div>
+                        <div class="field">
+                            <label for="tu-line">Line ID</label>
+                            <input id="tu-line" type="text">
+                        </div>
+                    </div>
+
+                    <div class="notice notice--info" style="margin-top: var(--space-lg);">
+                        <strong>同意書：</strong>請先閱讀並同意以下文件，系統將留存您的同意記錄。
+                    </div>
+
+                    <div class="field" style="margin-top: var(--space-md);">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span class="checkbox-text">我同意 <a href="#terms" target="_blank">服務條款</a></span>
+                        </label>
+                    </div>
+                    <div class="field">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span class="checkbox-text">我同意 <a href="#privacy" target="_blank">個人資料提供同意書</a></span>
+                        </label>
+                    </div>
+
+                    <div style="margin-top: var(--space-lg); display:flex; gap: var(--space-sm);">
+                        <button class="btn btn--ghost" type="button" onclick="alert('返回（示意）')">取消</button>
+                        <button class="btn btn--primary" type="submit" onclick="event.preventDefault(); alert('註冊成功（示意）');">完成註冊</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2025 創照服務設計 · 本頁為UI提案Mock，非最終產品</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+

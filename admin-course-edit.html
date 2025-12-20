@@ -117,6 +117,39 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="member-only-course">
+                                        <span class="checkbox-text">會員限定課程</span>
+                                    </label>
+                                    <div class="field__help">勾選後，此課程僅限付費會員報名</div>
+                                </div>
+                                <div class="field">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="is-license-course">
+                                        <span class="checkbox-text">證照課程</span>
+                                    </label>
+                                    <div class="field__help">若為證照課程，將顯示證照相關資訊</div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="license-category">證照類別</label>
+                                    <select id="license-category">
+                                        <option value="">不適用</option>
+                                        <option value="gov" selected>政府證照</option>
+                                        <option value="private">民間證照</option>
+                                        <option value="aio">AIO證照</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="license-name">證照名稱</label>
+                                    <input type="text" id="license-name" placeholder="例如：長照小卡-照顧服務員">
+                                </div>
+                            </div>
                             
                             <div class="form-row">
                                 <div class="field">

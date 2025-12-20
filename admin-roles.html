@@ -75,6 +75,62 @@
                     <h3>使用者列表</h3>
                     <button type="button" class="btn btn--primary" onclick="openAddUserModal()">新增帳號</button>
                 </div>
+
+                <!-- Role & Permission Model (Customer Feedback 2025-12-18) -->
+                <div class="notice notice--info" style="margin-bottom: var(--space-lg);">
+                    <strong>角色與其權限管理（示意）：</strong>
+                    <ul style="margin: 8px 0 0 18px;">
+                        <li>系統管理者：所有權限，且可設定角色與其權限</li>
+                        <li>主管：排除「角色與其權限」功能</li>
+                        <li>課務人員：排除「角色與其權限」功能</li>
+                        <li>講師：一般功能 + 講師基本資料修改 + 上課資料上傳/修改</li>
+                        <li>會員/學員：一般功能（學員需隱藏部分模組，依會員狀態顯示）</li>
+                    </ul>
+                </div>
+
+                <div class="table-responsive" style="margin-bottom: var(--space-lg);">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>角色</th>
+                                <th>可用模組（摘要）</th>
+                                <th>是否可設定權限</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>系統管理者</td>
+                                <td>全部</td>
+                                <td><span class="status-badge status-badge--active">是</span></td>
+                            </tr>
+                            <tr>
+                                <td>主管</td>
+                                <td>除「角色與其權限」以外</td>
+                                <td><span class="status-badge status-badge--inactive">否</span></td>
+                            </tr>
+                            <tr>
+                                <td>課務人員</td>
+                                <td>除「角色與其權限」以外</td>
+                                <td><span class="status-badge status-badge--inactive">否</span></td>
+                            </tr>
+                            <tr>
+                                <td>講師</td>
+                                <td>一般功能 + 講師資料 + 上課資料上傳</td>
+                                <td><span class="status-badge status-badge--inactive">否</span></td>
+                            </tr>
+                            <tr>
+                                <td>會員</td>
+                                <td>一般功能（含完整學習地圖/資料夾等）</td>
+                                <td><span class="status-badge status-badge--inactive">否</span></td>
+                            </tr>
+                            <tr>
+                                <td>學員</td>
+                                <td>一般功能（隱藏：AIO職種進度/課程地圖/證照地圖/我的學習資料夾）</td>
+                                <td><span class="status-badge status-badge--inactive">否</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 
                 <div class="table-responsive">
                     <table class="data-table">

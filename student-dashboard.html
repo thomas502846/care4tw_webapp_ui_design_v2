@@ -175,6 +175,24 @@
                     </div>
                     <p class="meta" style="margin-top: var(--space-sm);">依客戶回饋新增入口：聯絡照顧學校、長照積分管理。</p>
                 </div>
+
+                <!-- Membership Purchase (Customer Feedback 2025-12-18) -->
+                <div class="card" style="margin-top: var(--space-lg);">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <h3 style="margin:0;">會員資格</h3>
+                        <span class="badge badge--success">會員</span>
+                    </div>
+                    <p class="meta" style="margin-top: var(--space-sm);">一般學員可購買會員資格（限購買一次，取消後可再次購買）。</p>
+                    <div style="display:flex; gap: var(--space-sm); margin-top: var(--space-md);">
+                        <button class="btn btn--primary" type="button" data-open="modal-membership">🛒 購買會員資格</button>
+                        <button class="btn btn--ghost" type="button" onclick="alert('查看會員權益（示意）')">查看權益</button>
+                    </div>
+                </div>
+
+                <div class="notice notice--info" style="margin-top: var(--space-lg);">
+                    <strong>提示：</strong>學員註冊/講師註冊同意書示意頁：
+                    <a href="signup-student.html">學員註冊</a> · <a href="signup-teacher.html">講師註冊</a>
+                </div>
             </div>
 
             <!-- Dashboard Content Grid -->
@@ -859,10 +877,42 @@
                         <option value="atm">ATM轉帳</option>
                     </select>
                 </div>
+                <div class="field">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span class="checkbox-text">我同意 <a href="#points-terms" target="_blank">購買點數與點數使用規範同意書</a></span>
+                    </label>
+                    <div class="field__help">系統將留存使用者同意記錄（示意）</div>
+                </div>
             </div>
             <div class="modal__actions">
                 <button class="btn" data-close>取消</button>
                 <button class="btn btn--primary">前往付款</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Membership Purchase Modal (Customer Feedback 2025-12-18) -->
+    <div class="modal-backdrop" id="modal-membership" role="dialog" aria-labelledby="membership-title" aria-hidden="true">
+        <div class="modal">
+            <div class="modal__header">
+                <h2 class="modal__title" id="membership-title">購買會員資格</h2>
+                <button class="modal__close" data-close aria-label="關閉對話框">✕</button>
+            </div>
+            <div class="modal__content">
+                <p>會員資格費用：<strong>NT$4,500</strong>（示意）</p>
+                <p class="meta">購買後贈送點數：100 點（示意）</p>
+                <div class="field">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span class="checkbox-text">我同意 <a href="#membership-terms" target="_blank">購買會員資格同意書</a></span>
+                    </label>
+                    <div class="field__help">系統將留存使用者同意記錄（示意）</div>
+                </div>
+            </div>
+            <div class="modal__actions">
+                <button class="btn" data-close>取消</button>
+                <button class="btn btn--primary" type="button" onclick="alert('會員購買成功（示意）')">確認購買</button>
             </div>
         </div>
     </div>

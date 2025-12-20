@@ -124,6 +124,7 @@
                                 <th>點數</th>
                                 <th>完成度</th>
                                 <th>最近活動</th>
+                                <th>策略伙伴</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
@@ -161,11 +162,13 @@
                                         <span class="activity-action">完成課程</span>
                                     </div>
                                 </td>
+                                <td><span class="badge badge--info">是</span></td>
                                 <td>
                                     <div class="table-actions">
                                         <button type="button" class="btn btn--small" onclick="viewStudentHistory('S001234')">查看歷程</button>
                                         <button type="button" class="btn btn--small btn--primary" onclick="openGiftPointsModal('王○○', 'S001234')">贈點</button>
                                         <button type="button" class="btn btn--small btn--ghost" onclick="openExtendPointsModal('王○○', 'S001234')">延期點數</button>
+                                        <button type="button" class="btn btn--small btn--danger" onclick="openCancelStatusModal('王○○', 'S001234')">取消資格</button>
                                     </div>
                                 </td>
                             </tr>
@@ -421,6 +424,40 @@
             <div class="modal__footer">
                 <button type="button" class="btn btn--ghost" onclick="closeModal('extend-points-modal')">取消</button>
                 <button type="button" class="btn btn--primary" onclick="confirmExtendPoints()">確認延期</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cancel Member/Student Status Modal (Customer Feedback 2025-12-18) -->
+    <div id="cancel-status-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal">
+            <div class="modal__header">
+                <h3>取消會員或學員資格</h3>
+                <button type="button" class="modal__close" onclick="closeModal('cancel-status-modal')">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div class="meta" style="margin-bottom: var(--space-md);">
+                    <div><strong id="cancel-student-name">學員</strong></div>
+                    <div id="cancel-student-id" class="meta">ID:</div>
+                </div>
+                <div class="field">
+                    <label for="cancel-type">取消類型</label>
+                    <select id="cancel-type">
+                        <option value="member">取消會員資格（限制再購買/功能）</option>
+                        <option value="student">取消學員資格（限制登入/購買）</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="cancel-reason">原因</label>
+                    <textarea id="cancel-reason" rows="3" placeholder="請輸入取消原因"></textarea>
+                </div>
+                <div class="notice notice--warning">
+                    <strong>提醒：</strong>取消後將限制此帳號登入或購買（依取消類型）。此為示意流程。
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button type="button" class="btn btn--ghost" onclick="closeModal('cancel-status-modal')">取消</button>
+                <button type="button" class="btn btn--danger" onclick="confirmCancelStatus()">確認取消</button>
             </div>
         </div>
     </div>
@@ -800,6 +837,31 @@
                 modal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
             }
+        }
+
+        function openCancelStatusModal(name, id) {
+            const modal = document.getElementById('cancel-status-modal');
+            const nameEl = document.getElementById('cancel-student-name');
+            const idEl = document.getElementById('cancel-student-id');
+            if (nameEl) nameEl.textContent = name;
+            if (idEl) idEl.textContent = 'ID: ' + id;
+            if (modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        function confirmCancelStatus() {
+            const name = document.getElementById('cancel-student-name').textContent;
+            const type = document.getElementById('cancel-type').value;
+            const reason = document.getElementById('cancel-reason').value;
+            if (!reason.trim()) {
+                alert('請輸入取消原因');
+                return;
+            }
+            alert(`已取消 ${name} 的${type === 'member' ? '會員' : '學員'}資格（示意）`);
+            closeModal('cancel-status-modal');
+            document.getElementById('cancel-reason').value = '';
         }
         
         function confirmExtendPoints() {

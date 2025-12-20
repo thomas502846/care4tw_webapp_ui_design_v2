@@ -144,6 +144,33 @@
                     </div>
                 </div>
 
+                <!-- Search (Customer Feedback 2025-12-18) -->
+                <div class="card admin-card">
+                    <div class="card__header">
+                        <h2>🔎 題庫與問卷搜尋</h2>
+                    </div>
+                    <div class="grid" style="grid-template-columns: 1fr 1fr 2fr auto; gap: var(--space-md); align-items:end;">
+                        <div class="field">
+                            <label for="qb-created-date">建立日期</label>
+                            <input type="date" id="qb-created-date">
+                        </div>
+                        <div class="field">
+                            <label for="qb-type">類型</label>
+                            <select id="qb-type">
+                                <option value="">全部</option>
+                                <option value="question">題目</option>
+                                <option value="test">測驗</option>
+                                <option value="survey">問卷</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="qb-name">名稱</label>
+                            <input type="text" id="qb-name" placeholder="搜尋名稱">
+                        </div>
+                        <button class="btn btn--primary" type="button" onclick="alert('搜尋（示意）')">搜尋</button>
+                    </div>
+                </div>
+
                 <!-- Question Categories -->
                 <div class="card admin-card">
                     <div class="card__header">

@@ -78,6 +78,28 @@
                     <h3>公告列表</h3>
                     <button type="button" class="btn btn--primary" onclick="openAnnouncementModal()">新增公告</button>
                 </div>
+
+                <!-- Search / Filters (Customer Feedback 2025-12-18) -->
+                <div class="grid" style="grid-template-columns: 1fr 1fr 2fr auto; gap: var(--space-md); align-items: end; margin-bottom: var(--space-lg);">
+                    <div class="field">
+                        <label for="announcement-created-date">建立日期</label>
+                        <input type="date" id="announcement-created-date">
+                    </div>
+                    <div class="field">
+                        <label for="announcement-category-filter">類別</label>
+                        <select id="announcement-category-filter">
+                            <option value="">全部</option>
+                            <option value="school">校務</option>
+                            <option value="course">課程</option>
+                            <option value="event">活動</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="announcement-title-search">公告標題</label>
+                        <input type="text" id="announcement-title-search" placeholder="搜尋公告標題">
+                    </div>
+                    <button class="btn btn--primary" type="button" onclick="alert('搜尋（示意）')">搜尋</button>
+                </div>
                 
                 <div class="table-responsive">
                     <table class="data-table">

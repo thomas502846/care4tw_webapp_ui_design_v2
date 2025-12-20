@@ -203,6 +203,31 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Strategic Partner Reporting (Customer Feedback 2025-12-18) -->
+            <div class="card" style="margin-top: var(--space-lg);">
+                <h3>策略伙伴學員報表（示意）</h3>
+                <div class="grid" style="grid-template-columns: 1fr 1fr 1fr auto; gap: var(--space-md); align-items:end;">
+                    <div class="field">
+                        <label for="report-org">就職單位</label>
+                        <input type="text" id="report-org" placeholder="搜尋就職單位">
+                    </div>
+                    <div class="field">
+                        <label for="report-partner-flag">策略伙伴學員身份註記</label>
+                        <select id="report-partner-flag">
+                            <option value="">不限</option>
+                            <option value="yes">是</option>
+                            <option value="no">否</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="report-date-range">期間</label>
+                        <input type="text" id="report-date-range" placeholder="例如：2025/01/01～2025/12/31">
+                    </div>
+                    <button class="btn btn--primary" type="button" onclick="alert('產出報表（示意）')">產出</button>
+                </div>
+                <div class="meta" style="margin-top: var(--space-sm);">用於回報策略伙伴派送學員的修課情況（依就職單位與註記篩選）。</div>
+            </div>
             
             <!-- Detailed Reports -->
             <div class="card" style="margin-top: var(--space-lg);">

@@ -81,6 +81,28 @@
                             <button type="button" class="btn btn--small" onclick="createTest('survey')">新增問卷</button>
                         </div>
                     </div>
+
+                    <!-- Search (Customer Feedback 2025-12-18) -->
+                    <div class="grid" style="grid-template-columns: 1fr 1fr 1fr 1fr auto; gap: var(--space-md); align-items:end; margin-bottom: var(--space-md);">
+                        <div class="field">
+                            <label for="test-created-date">建立日期</label>
+                            <input type="date" id="test-created-date">
+                        </div>
+                        <div class="field">
+                            <label for="test-type">類型</label>
+                            <select id="test-type">
+                                <option value="">全部</option>
+                                <option value="pretest">前測</option>
+                                <option value="posttest">後測</option>
+                                <option value="survey">問卷</option>
+                            </select>
+                        </div>
+                        <div class="field" style="grid-column: span 2;">
+                            <label for="test-name">名稱</label>
+                            <input type="text" id="test-name" placeholder="搜尋測驗/問卷名稱">
+                        </div>
+                        <button type="button" class="btn btn--primary" onclick="alert('搜尋（示意）')">搜尋</button>
+                    </div>
                     
                     <!-- Test/Survey List -->
                     <div class="test-list">
@@ -165,27 +187,29 @@
                 <!-- Right Column - Results Analysis -->
                 <div class="card">
                     <h3>結果彙整</h3>
-                    
+
+                    <!-- Search (Customer Feedback 2025-12-18) -->
                     <div class="results-filters">
                         <div class="filter-group">
-                            <label for="course-filter">選擇課程</label>
-                            <select id="course-filter">
-                                <option value="">所有課程</option>
-                                <option value="dementia">失智友善溝通</option>
-                                <option value="integrated">整合照護直播</option>
-                                <option value="community">社區共生設計</option>
-                                <option value="hospice">安寧緩和醫療</option>
+                            <label for="result-date">上課日期</label>
+                            <input type="date" id="result-date">
+                        </div>
+                        <div class="filter-group">
+                            <label for="result-course-name">課程名稱</label>
+                            <input type="text" id="result-course-name" placeholder="搜尋課程名稱">
+                        </div>
+                        <div class="filter-group">
+                            <label for="result-course-category">課程類別</label>
+                            <select id="result-course-category">
+                                <option value="">全部</option>
+                                <option value="dementia">失智</option>
+                                <option value="hospice">安寧</option>
+                                <option value="community">社區</option>
+                                <option value="online">線上</option>
                             </select>
                         </div>
-                        
-                        <div class="filter-group">
-                            <label for="cert-filter">選擇證照</label>
-                            <select id="cert-filter">
-                                <option value="">所有證照</option>
-                                <option value="care-worker">照顧服務員</option>
-                                <option value="care-designer">照顧設計師</option>
-                                <option value="home-doctor">在宅醫師</option>
-                            </select>
+                        <div class="filter-group" style="display:flex; align-items:end;">
+                            <button type="button" class="btn btn--primary" onclick="alert('搜尋（示意）')">搜尋</button>
                         </div>
                     </div>
                     
